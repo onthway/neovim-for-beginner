@@ -27,6 +27,7 @@ function M.format()
         return client.name ~= "tsserver"
           and client.name ~= "jsonls"
           and client.name ~= "html"
+          and client.name ~= "python"
           and client.name ~= "sumneko_lua"
           and client.name ~= "jdt.ls"
           and client.name ~= ""

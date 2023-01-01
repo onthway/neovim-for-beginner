@@ -66,7 +66,7 @@ function M.setup(opts)
   nls.setup {
     debug = false,
     debounce = 150,
-    save_after_format = false,
+    save_after_format = true,
     sources = sources,
     on_attach = opts.on_attach,
     root_dir = nls_utils.root_pattern ".git",

@@ -6,11 +6,14 @@ function M.setup()
 
   -- packer.nvim configuration
   local conf = {
+    max_jobs = 15,
     profile = {
       enable = true,
       threshold = 0, -- the amount in ms that a plugins load time must be over for it to be included in the profile
     },
-
+    git = {
+      clone_timeout = 900,
+    },
     display = {
       open_fn = function()
         return require("packer.util").float { border = "rounded" }
@@ -1497,7 +1500,9 @@ function M.setup()
         }
       end,
     }
-
+    use {
+      "luk400/vim-jukit",
+    }
     -- https://github.com/WhoIsSethDaniel/toggle-lsp-diagnostics.nvim
     -- https://github.com/rbong/vim-buffest
     -- https://github.com/jamestthompson3/nvim-remote-containers
